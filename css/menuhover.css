@@ -1,0 +1,99 @@
+h3{
+    color:rgba(240, 240, 235, 0.878);
+    }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background:#17028a;
+    position:inherit;
+    z-index: 100;
+}
+.menu{
+    width: auto;
+    float:right;
+    margin-top: 23px;
+    margin-right: 45%;
+    
+}
+
+.menu ul{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+}
+
+/*Menú lista, edicion de cajas*/
+.menu li a{
+    padding: 10px;
+    border-radius: 2em;
+    border:none;
+    outline: 2px solid rgb(253, 253, 253);
+    outline-offset: 3px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 7px;
+}
+
+.menu li a:hover{
+    color: white;
+}
+
+@media screen and (max-width:900px){
+    .icon-menu{
+        display: block;
+        color: white;
+        float: right;
+        padding: 5px;
+        font-size: 24px;
+        border: 1px solid #2398c3;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-right: 16px;
+    }
+    .icon-menu:hover{
+        background: #1d9ec4;
+        cursor: pointer;
+    }
+    .menu{
+        float: left;
+        margin-top: 0px;
+        width: 100%;
+        height:0;
+        overflow: hidden;
+        background: #1e1e1e;
+        transition: all 300ms;
+    }
+    
+    .menu ul{
+        flex-direction: column;
+        
+    }
+    .menu li a{
+        display: block;
+       
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

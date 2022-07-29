@@ -1,0 +1,53 @@
+/*Contenedor todo*/
+.container-all{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 40px;
+    border-top: 6px solid rgba(16, 35, 141, 0.99);
+}
+/*Titulo*/
+.title{
+    font-size: 40px;
+    margin-bottom: 40px;
+    color:#080c74;
+}
+/*Subtitulo*/
+.sub-title{
+    font-size: 30px;
+    font-weight: 400;
+    color:#2e2d2d;
+}
+
+/*Contenedor imagen*/
+.container-all img{
+    width: 480px;
+    float: left;
+    margin-right: 20px;
+
+}
+/*Contenedor de todo etiqueta p*/
+.container-all p{
+    font-size: 21px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+/* Propiedades de etiqueta b*/
+.container-all b{
+    font-size: 21px;
+    font-weight: 300;
+}
+
+h3{
+    color:aliceblue;
+}
+/* Propiedades de los enlaces*/
+.container .enlace a {
+    font-size: 21px;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none; /* La propiedad text-decoration permite que el texto sea decorado*/
+    color: #d3136b;
+}

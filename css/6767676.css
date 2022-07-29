@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #0771f3; /* Color del header */
+    box-shadow: #fa1919; /* Código por definir para que sirve */ 
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px; /* Comentario */
+    margin: auto; /* Comentario */
+    display: flex;
+    justify-content: space-between; /* Comentario */
+}
+
+.logo{
+    height: 80px; /* Altura del logo en el header */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #ffffff; /* Color del texto Informática*/
+}
+
+
+.menu {
+    height: 80px; /* Altura del Menú en el header */
+}
+
+.menu nav{
+    height: 100%; /* Altura del menu de navegación */
+}
+
+.menu nav ul{
+    height: 100%;
+    display:flex; /* posición del menú de navegación*/
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px; /* margen entre la lista del menú*/
+    display: flex; /* Indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{ /* Selector del menú, linea de color*/
+    content: '';
+    width: 100%;
+    height: 7px; /* Linea indicando la navegación seleccionada*/
+    background: #b7571a; /* color del selector*/
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{ /* posición del menú de navegación*/
+    color: #ffffff; /* */
+    font-size: 18px; /* posición del menú de navegación*/
+    transition: color 300ms; /* posición del menú de navegación*/
+}
+
+.menu nav ul li a:hover{
+    color: #f5d23d; /* color del efecto al pasar el puntero en el menú */
+}
+
+.menu .text-menu-selected{ /* Selector menú Inicio */
+    color: #f5d23d;
+}
+
+.menu nav ul li a i{ /* No borrar! */
+    display: none;
+}
+
+#icon-menu{ /* propiedades del icono del menú */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #c0c0c7; /* Color del icono del menú*/
+    border-radius: 100%;
+    color: #4e4b4b; /* Color interior icono del menú */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{ /*Efecto señalador con el mouse */
+    opacity: 0.8;
+}
+
+
+/* Propiedades de Portada*/
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/nordi.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Propiedades la cubierta de portada*/
+.container-cover:before{ 
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(46, 46, 46, 0.8); /* color de la cubierta*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Propiedades contenedor de la cubierta */
+.container-info-cover{
+    max-width: 800px;  /*ancho máximo del contenedor de la cubierta */
+    height: 500px; /* altura de la contenedor de la cubierta */
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{ /* texto titulo en portada */
+    font-size: 60px;
+    font-weight: 500;
+    color: #ffffff; /* color del titulo en portada */
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{ /* texto subtitulo en portada*/
+    color: #ffffff; /* color del subtitulo en portada */
+    font-size: 28px;
+    font-weight: 300;
+}
+
+/* propiedades para hacer responsive nuestra página web*/
+
+@media screen and (max-width: 1220px){
+
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral {
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .menu-selected:before{
+        width: 0;
+    }
+
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: #858585;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #46a2fd;
+    }
+
+    #icon-menu{
+        display: flex;
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+}

@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #0d68d8; /* Color del header */
+    box-shadow: #ffffff; /* Código por definir para que sirve */ 
+    z-index: 2;
+}
+
+.header-content{
+    max-width: 1200px; /* Comentario */
+    margin: auto; /* Comentario */
+    display: flex;
+    justify-content: space-between; /* Comentario */
+}
+
+.logo{
+    height: 80px; /* Altura del logo en el header */ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 b{
+    color: #ffffff; /* Color del texto Informática*/
+}
+
+
+.menu {
+    height: 80px; /* Altura del Menú en el header */
+}
+
+.menu nav{
+    height: 100%; /* Altura del menu de navegación */
+}
+
+.menu nav ul{
+    height: 100%;
+    display:flex; /* posición del menú de navegación*/
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px; /* margen entre la lista del menú*/
+    display: flex; /* Indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.menu-selected:before{ /* Selector del menú, linea de color*/
+    content: '';
+    width: 100%;
+    height: 7px; /* Linea indicando la navegación seleccionada*/
+    background: #b7571a; /* color del selector*/
+    position:fixed;
+    top: 0;
+    left: 0;
+}
+
+.menu nav ul li a{ /* posición del menú de navegación*/
+    color: #fbc400; /* */
+    font-size: 18px; /* posición del menú de navegación*/
+    transition: color 300ms; /* posición del menú de navegación*/
+}
+
+.menu nav ul li a:hover{
+    color: #fbfbfb; /* color del efecto al pasar el puntero en el menú */
+}
+
+.menu .text-menu-selected{ /* Selector menú Inicio */
+    color: #fbc400;
+}
+
+.menu nav ul li a i{ /* No borrar! */
+    display: none;
+}
+
+#icon-menu{ /* propiedades del icono del menú */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #c0c0c7; /* Color del icono del menú*/
+    border-radius: 100%;
+    color: #4e4b4b; /* Color interior icono del menú */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{ /*Efecto señalador con el mouse */
+    opacity: 0.8;
+}
+
+
+/* Propiedades de Portada*/
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-image: url(../img/nordi.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Propiedades la cubierta de portada*/
+.container-cover:before{ 
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8); /* color de la cubierta*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Propiedades contenedor de la cubierta */
+.container-info-cover{
+    max-width: 800px;  /*ancho máximo del contenedor de la cubierta */
+    height: 500px; /* altura de la contenedor de la cubierta */
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.container-info-cover h1{ /* texto titulo en portada */
+    font-size: 60px;
+    font-weight: 500;
+    color: #01c0ff; /* color del titulo en portada */
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{ /* texto subtitulo en portada*/
+    color: #01c0ff; /* color del subtitulo en portada */
+    font-size: 28px;
+    font-weight: 300;
+}
+
+/* propiedades para hacer responsive nuestra página web*/
+
+
+
+
+.menu-bar{
+    width: 6%;
+    background: #2d2d2d;
+    padding: 15px 20px;
+    color: white;
+    font-size: 1.4em;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger-icon{
+    float: right;
+    clear:both;
+    margin-top: -5px;
+    font-size: 1.4em;
+}
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-top: -20px;
+    padding: 20px;
+}
+
+.blog-post{
+    background: white;
+    margin: 0 auto 2em auto;
+    padding: 35px 30px;
+}
+
+.side-post{
+    background: white;
+    margin: 0 auto 1.5em auto;
+    width: 15em;
+    padding: 20px;
+}
+
+.blog-content{
+    font-size: 1em;
+    border-left: 5px solid #C578DE;
+    padding-left: 15px;
+}
+
+.side-content{
+    font-size: .9em;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.blog-title{
+    font-weight: 500px;
+    font-size: 2.5em;
+    margin-top: 5px;
+}
+
+.date{
+    font-size: 1em;
+    font-weight: 400;
+    color: #9c9c9c;
+    margin-top: -10px;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}
+
+.post-link{
+    color: #5d05a5f6;
+    font-style: italic;
+    transition: all 0.4s;
+}
+
+.post-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*Boton*/
+
+.button{
+    display: block;
+    padding: 15px 20px;
+    margin-top: .8em;
+    background: #0B9513;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    border-radius: 3px;
+    transition: all .4s ease-in;
+}
+
+.button:hover{
+    background: #B637AD;
+}
+
+/*footer*/
+
+footer{
+    width: 100%;
+    float: right;
+    background: #057E47;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+footer h1{
+    margin: 20px auto;
+}
+
+footer p{
+    margin: auto;
+}
+
+@media screen and (max-width: 1220px){
+
+    .header-content,
+    .container-content,
+    .container-footer footer{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+    .blog-content,
+    .post-link{
+        font-size: .9em;
+    }
+    
+    .side-content{
+        font-size: .8em;
+    }
+
+    .span_3_of_3{
+        width: 100%;
+    }
+    
+    .span_2_of_3{
+        width: 66.1%;
+    }
+    
+    .span_1_of_3{
+        width: 32.2%;
+    }
+    
+
+}
+
+@media screen and (max-width: 1020px){
+
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article{
+        box-shadow: 0 0 0 0;
+    }
+
+    .container-aside{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container-aside aside{
+        max-width: 300px;
+        margin: 10px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .move-container-all{
+        transform: translateX(300px);
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral {
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+    }
+
+    .menu-selected:before{
+        width: 0;
+    }
+
+    .menu nav ul li a{
+        margin-top: 40px;
+        color: #858585;
+    }
+
+    .menu nav ul li a i{
+        width: 20px;
+        display: inline-block;
+        margin-right: 10px;
+        color: #46a2fd;
+    }
+
+    #icon-menu{
+        display: flex;
+    }
+
+    .container-aside{
+        flex-wrap: wrap;
+    }
+
+}
+
+@media screen and (max-width:1000px){
+    
+    
+    .content-menu{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        display: none;
+        padding: 20px;
+    }
+    
+    .content-item{
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        justify-content: center;
+    }
+    
+    .content-item span{
+        padding: 20px;
+    }
+    
+    
+    .content-menu h4{
+        transform: translateX(0px);
+    }
+    
+    
+    .content-article{
+        padding: 0px;
+        margin-top: 60px;
+        margin-left: 0;
+    }
+
+    .content-article article{
+        padding: 10px;
+    }
+
+}
+.container{
+    max-width: 1020px;
+    margin: 0 auto;
+    margin-top: -20px;
+    padding: 20px;
+}
+
+.blog-post{
+    background: white;
+    margin: 0 auto 2em auto;
+    padding: 35px 30px;
+}
+
+.side-post{
+    background: white;
+    margin: 0 auto 1.5em auto;
+    width: 15em;
+    padding: 20px;
+}
+
+.blog-content{
+    font-size: 1em;
+    border-left: 5px solid #C578DE;
+    padding-left: 15px;
+}
+
+.side-content{
+    font-size: .9em;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.blog-title{
+    font-weight: 500px;
+    font-size: 2.5em;
+    margin-top: 5px;
+}
+
+.date{
+    font-size: 1em;
+    font-weight: 400;
+    color: #9c9c9c;
+    margin-top: -10px;
+    text-decoration: underline;
+    text-decoration-color: currentColor;
+}
+
+.post-link{
+    color: #5d05a5f6;
+    font-style: italic;
+    transition: all 0.4s;
+}
+
+.post-link:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*Boton*/
+
+.button{
+    display: block;
+    padding: 15px 20px;
+    margin-top: .8em;
+    background: #0B9513;
+    text-align: center;
+    color: white;
+    font-size: 1.4em;
+    border-radius: 3px;
+    transition: all .4s ease-in;
+}
+

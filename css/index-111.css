@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'koulen', cursive;
+}
+body{
+background: rgb(1, 54, 151);
+}
+/*Contenedor de todo*/
+.container-all{
+width: 100%;
+max-width: 1000px;
+margin: auto;
+padding: 60px;
+
+background: rgb(2, 18, 243);
+margin-top: 60px;
+border-top: 6px solid rgba(49, 80, 255, 0.99);
+}
+/*Titulo*/
+.title{
+font-size: 40px;
+margin-bottom: 60px;
+color:#ffffff;
+}
+/*Subtitulo*/
+.sub-title{
+font-size: 30px;
+font-weight: 400;
+color:#ffffff;
+}
+/*Contenedor de imagen*/
+.derechaimg{
+width: 300px;
+float: right;
+margin-right: 20px;
+margin-bottom: 20px;
+}
+.izquierdaimg{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    }
+/*Contenedor de todas las etiquetas p*/
+.container-all p{
+font-size: 18px;
+font-weight: 300;
+margin-top: 20px;
+}
+/*Contenedor de todas las etiquetas b*/
+.container-all b{
+font-size: 20px;
+color:#ffffff;
+font-weight: normal;
+}
+/*Encabezado o Descripción que aparece en el footer, autor y
+derechos*/
+h3{
+color:rgba(240, 240, 235, 0.878);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 70px;
+    background:#17028a;
+    position:inherit;
+    z-index: 100;
+}
+.menu{
+    width: auto;
+    float:right;
+    margin-top: 23px;
+    margin-right: 45%;
+    
+}
+
+.menu ul{
+    display: flex;
+}
+.menu li{
+    list-style: none;
+}
+
+/*Menú lista, edicion de cajas*/
+.menu li a{
+    padding: 10px;
+    border-radius: 2em;
+    border:none;
+    outline: 2px solid rgb(253, 253, 253);
+    outline-offset: 3px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 7px;
+}
+
+.menu li a:hover{
+    color: white;
+}
